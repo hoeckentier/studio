@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>LAND-LEBEN – Ihr Nahversorger in Aigen am Inn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --ll-turquoise: #36B6A3;
+      --ll-yellow:   #F3C21C;
+      --ll-brown:    #6E4F32;
+      --ll-grey:     #EDECEB;
+      --ll-dark:     #111111;
+      --ll-light:    #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--ll-grey);
+      color: #222;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    header {
+      background: var(--ll-dark);
+      color: var(--ll-light);
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      font-weight: 600;
+      letter-spacing: .1em;
+      color: var(--ll-yellow);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    h1, h2 {
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      letter-spacing: .03em;
+      color: var(--ll-brown);
+    }
+
+    section { margin: 3rem 0; }
+
+    .hero {
+      background: radial-gradient(circle at top left,#222 0,#000 55%);
+      color: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: 24px;
+      margin-top: 1.5rem;
+    }
+
+    .hero h1 {
+      color: var(--ll-yellow);
+      margin-top: 0;
+    }
+
+    .hero p { margin-top: .5rem; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .7rem 1.3rem;
+      border-radius: 999px;
+      background: var(--ll-turquoise);
+      color: var(--ll-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      font-size: .98rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Wenn du dein Logo als Bild hast:
+       <img src="logo-land-leben.png" alt="Land-Leben Logo" style="height:50px;"> -->
+  <span class="logo">LAND-LEBEN</span>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Ihr Nahversorger – direkt vor der Haustür.</h1>
+    <p>
+      LAND-LEBEN bringt Lebensmittel und Dinge des täglichen Bedarfs zurück ins Dorf –
+      regional, praktisch und rund um die Uhr erreichbar.
+    </p>
+    <a href="#kontakt" class="btn">Mehr erfahren</a>
+  </section>
+
+  <section id="konzept">
+    <h2>Unser Konzept</h2>
+    <p class="section-intro">
+      Im ländlichen Raum werden Wege für kleine Besorgungen immer länger.
+      LAND-LEBEN macht kleine Einkäufe wieder vor Ort möglich – zu Fuß oder mit dem Fahrrad,
+      ohne jede Fahrt in den nächsten Supermarkt.
+    </p>
+  </section>
+
+  <section id="zugang">
+    <h2>Zugang & Bezahlung</h2>
+    <p class="section-intro">
+      Der Zugang zum Laden erfolgt bequem über ein Kartenterminal.
+      Akzeptiert werden EC- und Kreditkarten sowie Apple Pay und Google Pay.
+      Der Einkauf wird über ein Selbstbedienungsterminal abgewickelt, die Zahlung ist komplett bargeldlos.
+    </p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p class="section-intro">
+      Sie haben Fragen, möchten kooperieren oder regionale Produkte anbieten?
+      Schreiben Sie uns gerne:
+      <br><br>
+      E-Mail: <strong>info@land-leben.shop</strong>
+    </p>
+  </section>
+</main>
+
+</body>
+</html>
