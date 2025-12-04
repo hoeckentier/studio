@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-visual",
+      "description": "Visual for hero section, could be a shop or product photo",
+      "imageUrl": "https://images.unsplash.com/photo-1708317033463-e1350cff1392?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3RvcmUlMjBwcm9kdWN0c3xlbnwwfHx8fDE3NjQ4MzcwNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "store products"
+    },
+    {
+      "id": "logo",
+      "description": "Logo for Land-Leben",
+      "imageUrl": "https://images.unsplash.com/photo-1512200238169-db4dda8e8481?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdW5mbG93ZXIlMjBsZWFmfGVufDB8fHx8MTc2NDgzNzA1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunflower leaf"
+    }
+  ]
 }
