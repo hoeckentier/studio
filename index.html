@@ -38,55 +38,55 @@
       text-decoration: none;
     }
 
-        /* NAVIGATION MIT Logo – neue Version -------------------------------- */
+ /* NAVIGATION MIT Logo – braune Version -------------------------------- */
 
-    nav {
-      background: var(--ll-white);              /* Header jetzt weiß */
-      padding: 0.6rem 1.2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 4px solid var(--ll-green); /* dünne grüne Linie */
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-    }
+nav {
+  background: var(--ll-brown);            /* BRAUNER HEADER */
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
 
-    /* Logo auf weiß – ohne extra Kachel, damit es „frei“ steht */
-    .Logo-img {
-      height: 80px;        /* bei Bedarf 60–80px ausprobieren */
-      width: auto;
-      display: block;
-    }
+/* Logo ohne weißen Rahmen – wirkt auf Braun kräftiger */
+.Logo-img {
+  height: 70px;  
+  width: auto;
+  display: block;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
+/* Navigation rechts */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
 
-    .nav-links a {
-      font-family: "Patrick Hand", sans-serif;
-      color: var(--ll-green);
-      font-size: 1.05rem;
-      padding: 0.3rem 0.9rem;
-      border-radius: 999px;
-      transition: background 0.15s, color 0.15s, transform 0.1s;
-    }
+.nav-links a {
+  font-family: "Patrick Hand", sans-serif;
+  color: var(--ll-white);              /* Weiß für maximalen Kontrast */
+  font-size: 1.05rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
 
-    .nav-links a:hover {
-      background: var(--ll-green);
-      color: #ffffff;
-      transform: translateY(-1px);
-    }
+.nav-links a:hover {
+  background: var(--ll-green);         /* Land-Leben Grün als Hover */
+  color: white;
+  transform: translateY(-1px);
+}
 
 
 
