@@ -59,17 +59,19 @@
       gap: 0.6rem;
     }
 
-    /* OPTION 1: Logo auf weißer, abgerundeter Badge */
-    .Logo-img {
-      height: 70px;                 /* Größe nach Geschmack: 60–80px */
-      width: auto;
-      display: block;
-      background: #ffffff;          /* weiße Fläche hinter dem Logo */
-      padding: 8px 14px;            /* Innenabstand */
-      border-radius: 18px;          /* abgerundete Kachel */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);  /* dezenter Schatten */
-      border: 1px solid rgba(255,255,255,0.7);  /* leichter weißer Rand */
-    }
+    /* OPTION 1B: Logo auf weißer, abgerundeter Badge */
+   .Logo-img {
+  height: 70px;                     /* Logo-Größe */
+  width: auto;
+  display: block;
+
+  background: var(--ll-green);      /* dunkles Grün als Badge */
+  padding: 14px 22px;               /* mehr Luft um das Logo */
+  border-radius: 22px;              /* weiche Rundung */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  border: 2px solid rgba(255,255,255,0.15);  /* ganz feiner Rahmen */
+}
+
 
     .nav-links {
       display: flex;
