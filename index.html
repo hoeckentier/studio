@@ -38,11 +38,11 @@
       text-decoration: none;
     }
 
-        /* NAVIGATION MIT Logo ---------------------------------------- */
+        /* NAVIGATION MIT Logo – neue Version -------------------------------- */
 
     nav {
-      background: var(--ll-green);
-      padding: 0.7rem 1.2rem;
+      background: var(--ll-white);              /* Header jetzt weiß */
+      padding: 0.6rem 1.2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -50,7 +50,8 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      border-bottom: 4px solid var(--ll-green); /* dünne grüne Linie */
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
 
     .nav-left {
@@ -59,36 +60,34 @@
       gap: 0.6rem;
     }
 
-    /* Logo gut sichtbar machen */
+    /* Logo auf weiß – ohne extra Kachel, damit es „frei“ steht */
     .Logo-img {
-      height: 50px;           /* bei Bedarf größer/kleiner stellen */
+      height: 70px;        /* bei Bedarf 60–80px ausprobieren */
       width: auto;
       display: block;
-      background: #ffffff;    /* weißer Hintergrund hinter dem Logo */
-      padding: 6px 10px;      /* Abstand zum Rand */
-      border-radius: 12px;    /* abgerundete Ecken */
-      box-shadow: 0 0 6px rgba(0,0,0,0.15);
     }
 
     .nav-links {
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
     }
 
     .nav-links a {
       font-family: "Patrick Hand", sans-serif;
-      color: var(--ll-white);
+      color: var(--ll-green);
       font-size: 1.05rem;
-      padding: 0.35rem 0.9rem;
+      padding: 0.3rem 0.9rem;
       border-radius: 999px;
-      transition: background 0.15s, transform 0.1s;
+      transition: background 0.15s, color 0.15s, transform 0.1s;
     }
 
     .nav-links a:hover {
-      background: rgba(255,255,255,0.25);
-      transform: translateY(-2px);
+      background: var(--ll-green);
+      color: #ffffff;
+      transform: translateY(-1px);
     }
+
 
 
     /* LAYOUT ------------------------------------------------------ */
