@@ -65,11 +65,7 @@
   width: auto;
   display: block;
 
-  background: var(--ll-green);      /* dunkles Grün als Badge */
   padding: 14px 22px;               /* mehr Luft um das Logo */
-  border-radius: 22px;              /* weiche Rundung */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  border: 2px solid rgba(255,255,255,0.15);  /* ganz feiner Rahmen */
 }
 
 
@@ -148,6 +144,74 @@
       transform: translateY(-2px);
     }
 
+    /* CARD GRID ---------------------------------------------------- */
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 0 1.6rem;
+    }
+
+    .card-wrapper {
+      flex: 1 1 calc(25% - 1.125rem);
+      min-width: 150px;
+    }
+
+    .card {
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-family: "Patrick Hand", sans-serif;
+      text-align: center;
+      padding: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .card:hover .card-overlay {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .card-description {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background: var(--ll-grey);
+      padding: 0;
+      margin: 0.8rem 0 0 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .card-description.active {
+      max-height: 500px;
+      padding: 1rem;
+    }
+
     /* SECTIONS ---------------------------------------------------- */
 
     section.block {
@@ -175,6 +239,63 @@
       color: var(--ll-green);
       text-decoration: underline;
       text-underline-offset: 3px;
+    }
+
+    /* FORM STYLES ------------------------------------------------ */
+
+    .form-group {
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--ll-text);
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.7rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--ll-green);
+      box-shadow: 0 0 0 3px rgba(77, 175, 124, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-submit {
+      display: inline-block;
+      background: var(--ll-green);
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.5rem;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .form-submit:hover {
+      background: #60C892;
+      transform: translateY(-2px);
     }
 
     footer {
@@ -216,11 +337,11 @@
     </div>
 
     <div class="nav-links">
-      <a href="#home">Home</a>
+      <a href="#konzept">Konzept</a>
+      <a href="#partner">Partner</a>
       <a href="#produkte">Produkte</a>
-      <a href="#zutritt">Zutritt</a>
-      <a href="#kontakt">Kontakt</a>
       <a href="#produktwuensche">Produktwünsche</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
   </nav>
 
@@ -237,28 +358,48 @@
       <a class="btn" href="#produkte">Mehr erfahren</a>
     </section>
 
-    <!-- PRODUKTE -->
-    <section id="produkte" class="block">
-      <h2>Produkte</h2>
-      <p>
-        Im LAND-LEBEN finden Sie alles, was Sie für den täglichen Bedarf benötigen:
-        frische Lebensmittel, Grundnahrungsmittel, Getränke sowie ausgewählte Artikel
-        aus Drogerie und Haushalt. Ein Schwerpunkt liegt auf regionalen Produkten von
-        Erzeugern aus der Umgebung.
-      </p>
-    </section>
+    <!-- CARD GRID -->
+    <div class="card-grid">
+      <!-- Konzept Card -->
+      <div class="card-wrapper">
+        <div class="card" onclick="toggleDescription(this)" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop');">
+          <div class="card-overlay">Konzept</div>
+        </div>
+        <div class="card-description" id="desc-konzept">
+          Der Zugang zum Laden erfolgt bequem über ein Kartenterminal. Akzeptiert werden gängige EC- und Kreditkarten sowie Apple Pay und Google Pay. Der Einkauf wird über ein Selbstbedienungsterminal abgewickelt, die Zahlung ist komplett bargeldlos.
+        </div>
+      </div>
 
-    <!-- ZUTRITT -->
-    <section id="zutritt" class="block">
-      <h2>Zutritt & Bezahlung</h2>
-      <p>
-        Der Zugang zum Laden erfolgt bequem über ein Kartenterminal.
-        Akzeptiert werden gängige EC- und Kreditkarten sowie Apple Pay und Google Pay.
-        Der Einkauf wird über ein Selbstbedienungsterminal abgewickelt,
-        die Zahlung ist komplett bargeldlos. So bleibt der Laden flexibel zugänglich
-        und Sie können unabhängig von festen Öffnungszeiten einkaufen.
-      </p>
-    </section>
+      <!-- Partner Card -->
+      <div class="card-wrapper">
+        <div class="card" onclick="toggleDescription(this)" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop');">
+          <div class="card-overlay">Partner</div>
+        </div>
+        <div class="card-description" id="desc-partner">
+          LAND-LEBEN arbeitet mit regionalen Anbietern und Erzeugern zusammen. Wir unterstützen lokale Betriebe und fördern den direkten Austausch zwischen Produzenten und Kunden. Wenn Sie Interesse an einer Partnerschaft haben, kontaktieren Sie uns gerne.
+        </div>
+      </div>
+
+      <!-- Produkte Card -->
+      <div class="card-wrapper">
+        <div class="card" onclick="toggleDescription(this)" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop');">
+          <div class="card-overlay">Produkte</div>
+        </div>
+        <div class="card-description" id="desc-produkte">
+          Im LAND-LEBEN finden Sie alles, was Sie für den täglichen Bedarf benötigen: frische Lebensmittel, Grundnahrungsmittel, Getränke sowie ausgewählte Artikel aus Drogerie und Haushalt. Ein Schwerpunkt liegt auf regionalen Produkten.
+        </div>
+      </div>
+
+      <!-- Produktwünsche Card -->
+      <div class="card-wrapper">
+        <div class="card" onclick="toggleDescription(this)" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop');">
+          <div class="card-overlay">Produktwünsche</div>
+        </div>
+        <div class="card-description" id="desc-produktwuensche">
+          Sie vermissen ein Produkt im Sortiment oder benötigen eine größere Menge? Gerne prüfen wir Ihre Anfrage – füllen Sie dafür das Formular aus und wir kümmern uns darum.
+        </div>
+      </div>
+    </div>
 
     <!-- KONTAKT -->
     <section id="kontakt" class="block">
@@ -272,28 +413,31 @@
       </p>
     </section>
 
-    <!-- PRODUKTWÜNSCHE -->
-    <section id="produktwuensche" class="block">
-      <h2>Produktwünsche</h2>
-      <p>
-        Sie vermissen ein bestimmtes Produkt im Sortiment?
-        LAND-LEBEN soll sich an den Bedürfnissen der Menschen im Ort orientieren.
-        Teilen Sie uns Ihre Produktwünsche gerne per E-Mail mit –
-        wir prüfen, ob wir diese in das Sortiment aufnehmen können.
-      </p>
-      <p>
-        E-Mail für Produktwünsche:
-        <a href="mailto:info@land-leben.shop?subject=Produktwunsch%20Land-Leben">
-          info@land-leben.shop
-        </a>
-      </p>
-    </section>
-
     <footer>
       © LAND-LEBEN Nahversorger – Aigen am Inn
     </footer>
 
   </main>
+
+  <script>
+    function toggleDescription(cardElement) {
+      // Finde die Beschreibung im parent card-wrapper
+      const cardWrapper = cardElement.closest('.card-wrapper');
+      const description = cardWrapper.querySelector('.card-description');
+      
+      if (description) {
+        // Schließe alle anderen offenen Beschreibungen
+        document.querySelectorAll('.card-description.active').forEach(desc => {
+          if (desc !== description) {
+            desc.classList.remove('active');
+          }
+        });
+        
+        // Toggle die aktuelle Beschreibung
+        description.classList.toggle('active');
+      }
+    }
+  </script>
 
 </body>
 </html>
